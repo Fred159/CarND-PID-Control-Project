@@ -33,6 +33,12 @@
 Tuned the parameters(kp,ki,kd) appropriately and apply to the code.The output was pretty good. The controller generate meaningful steering value to vehicle. So it can drived the car ran whole track.
 ![Appropriate PID with low velocity](https://github.com/Fred159/CarND-PID-Control-Project/blob/master/Successful%20driving%20with%20appropriate%20pid%20coefficient%20%20low%20velocity.png)
 
+### Reference
+1. mvirgo 
+2. udacity
+3. darienmt
+4. internet sources 
+
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
