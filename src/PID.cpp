@@ -10,11 +10,15 @@ PID::PID() {}
 
 PID::~PID() {}
 
-void PID::Init(double Kp, double Ki, double Kd) {
-
+void PID::Init(double Kp_, double Ki_, double Kd_) {
+/*
  PID::Kp = Kp;
   PID::Ki = Ki;
   PID::Kd = Kd;
+	*/
+	Kp = Kp_;
+	Ki = Ki_;
+	Kd = Kd_;
 /*
 	Kp = Kp;
 	Ki = Ki;
