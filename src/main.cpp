@@ -34,8 +34,8 @@ int main()
 
   PID pid;
   // TODO: Initialize the pid variable.
-	pid.Init(1, 0.0, 0.0);
-	//pid.Init(0, 1, 0.0);
+	//pid.Init(1, 0.0, 0.0);
+	pid.Init(0, 1, 0.0);
 	//pid.Init(0, 0, 1);
   //pid.Init(0.14, 0.0, 2.6);
 
