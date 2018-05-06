@@ -11,10 +11,20 @@
 
 ### PID effections
 1. P based controller
-
+ control only with p based controller , the reaction of car was pretty interesting. When the car ran with small cte, it can handled the little cte with small oscillation. But when the car turned the curve, the cte became larger and the controller began to control with big range of oscillation. 
+ 
+ ![oscillation with only p controller](https://github.com/Fred159/CarND-PID-Control-Project/blob/master/Oscillation%20%20with%20only%20P%20control.png)
 2. I based controller 
+
 3. D based controller
 
+4. PID with high velocity
+
+5. PID with low velocity 
+
+Tuned the parameters(kp,ki,kd) appropriately and apply to the code.
+
+Throttle was setted 
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
