@@ -1,3 +1,20 @@
+## PID controller project
+
+### Simulation environment.
+1. Docker windows with udacity image
+2. github
+3. visual studio and github editor
+4. Udacity simulator PID controller project
+
+### PID parameters tuned by hand... 
+(Tune by code will be done in future ....)
+
+### PID effections
+1. P based controller
+
+2. I based controller 
+3. D based controller
+
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
