@@ -14,17 +14,25 @@
  control only with p based controller , the reaction of car was pretty interesting. When the car ran with small cte, it can handled the little cte with small oscillation. But when the car turned the curve, the cte became larger and the controller began to control with big range of oscillation. 
  
  ![oscillation with only p controller](https://github.com/Fred159/CarND-PID-Control-Project/blob/master/Oscillation%20%20with%20only%20P%20control.png)
+ 
 2. I based controller 
-
+  I think the only I controller's reaction time is also too long. Reaction time can be handled by adding proportional control. It sum a lot of cte and generated big control value and then repeated the previous step again. 
+ ![ Only integral controller](https://github.com/Fred159/CarND-PID-Control-Project/blob/master/only%20with%20Integral%20control.png)
+ 
 3. D based controller
-
+ the D based controller's with small cte change rate, generated little control value. 
+  ![ Only derivative controller](https://github.com/Fred159/CarND-PID-Control-Project/blob/master/derivative%20control.png)
+ 
 4. PID with high velocity
-
+* throttle 90%
+ appropriate PID coefficient was tuned. Then applied the value to controller with throlle of 0.9(90%). Controller generate pretty good steer value in straight road. But once in the curve, controller started to generate steer value that made vehicle oscillation.
+ ![PID with high velocity](https://github.com/Fred159/CarND-PID-Control-Project/blob/master/appropriate%20pid%20param%20but%20with%20high%20speed.png)
+ 
 5. PID with low velocity 
+* throttle 30%
+Tuned the parameters(kp,ki,kd) appropriately and apply to the code.The output was pretty good. The controller generate meaningful steering value to vehicle. So it can drived the car ran whole track.
+![Appropriate PID with low velocity](https://github.com/Fred159/CarND-PID-Control-Project/blob/master/Successful%20driving%20with%20appropriate%20pid%20coefficient%20%20low%20velocity.png)
 
-Tuned the parameters(kp,ki,kd) appropriately and apply to the code.
-
-Throttle was setted 
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
