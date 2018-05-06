@@ -1,6 +1,7 @@
 #ifndef PID_H
 #define PID_H
-
+using namespace std;
+  
 class PID {
 public:
   /*
