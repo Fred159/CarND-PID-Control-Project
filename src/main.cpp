@@ -49,8 +49,8 @@ int main()
         if (event == "telemetry") {
           // j[1] is the data JSON object
           double cte = std::stod(j[1]["cte"].get<std::string>());
-          double speed = std::stod(j[1]["speed"].get<std::string>());
-          double angle = std::stod(j[1]["steering_angle"].get<std::string>());
+          //double speed = std::stod(j[1]["speed"].get<std::string>());
+          //double angle = std::stod(j[1]["steering_angle"].get<std::string>());
           double steer_value;
           /*
           * TODO: Calcuate steering value here, remember the steering value is
@@ -66,7 +66,7 @@ int main()
 		  // need steer_value normalization here or in pid class.
 		  steer_value = steer_value - pid.TotalError();
 		  //if steer angle unit from simulator is radian then 
-		  steer_value = steer_value / deg2rad(30);
+		  //steer_value = steer_value / deg2rad(30);
 		  //if steer angle unit from simulator is degree then 
 		  //steer_value = steer_value / 30;
 
