@@ -11,10 +11,13 @@ PID::PID() {}
 PID::~PID() {}
 
 void PID::Init(double Kp, double Ki, double Kd) {
-	Kp = Kp;
-	Ki = Ki;
-	Kd = Kd;
+	 PID::Kp = Kp;
+  PID::Ki = Ki;
+  PID::Kd = Kd;
+	
+	
 	prev_cte = 0;
+	
 	  p_error = 0.0;
   i_error = 0.0;
   d_error = 0.0;
