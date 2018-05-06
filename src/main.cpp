@@ -34,7 +34,7 @@ int main()
 
   PID pid;
   // TODO: Initialize the pid variable.
-  pid.Init(1, 1, 1);
+  pid.Init(0.5, 0.5, 0.7);
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
@@ -66,7 +66,7 @@ int main()
 		  // need steer_value normalization here or in pid class.
 		  steer_value = steer_value - pid.TotalError();
 		  //if steer angle unit from simulator is radian then 
-		  //steer_value = steer_value / deg2rad(30);
+		  steer_value = steer_value / deg2rad(30);
 		  //if steer angle unit from simulator is degree then 
 		  //steer_value = steer_value / 30;
 
