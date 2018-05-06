@@ -65,6 +65,8 @@ int main()
 		  pid.UpdateError(cte);
 		  // need steer_value normalization here or in pid class.
 		  steer_value = steer_value - pid.TotalError();
+		double te = pid.TotalError();
+		std::cout << "pid.TotalError() is : "<< te << std::endl;
 		  //if steer angle unit from simulator is radian then 
 		  //steer_value = steer_value / deg2rad(30);
 		  //if steer angle unit from simulator is degree then 
