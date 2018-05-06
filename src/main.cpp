@@ -34,6 +34,7 @@ int main()
 
   PID pid;
   // TODO: Initialize the pid variable.
+  pid.Init(1, 1, 1);
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
@@ -57,7 +58,18 @@ int main()
           * NOTE: Feel free to play around with the throttle and speed. Maybe use
           * another PID controller to control the speed!
           */
-          
+		  /* lin code , steer value max is 30 degree
+		  const steer_value_max = 30[degree] (need to convert degree to radian if the value from simulator is in radian.);
+		  steer_value = steer_value/steer_value_max
+		  */
+		  pid.UpdateError(cte);
+		  // need steer_value normalization here or in pid class.
+		  steer_value = steer_value - pid.TotalError();
+		  //if steer angle unit from simulator is radian then 
+		  //steer_value = steer_value / deg2rad(30);
+		  //if steer angle unit from simulator is degree then 
+		  //steer_value = steer_value / 30;
+
           // DEBUG
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
 
