@@ -15,6 +15,7 @@ void PID::Init(double Kp, double Ki, double Kd) {
 	Ki = Ki;
 	Kd = Kd;
 	prev_cte = 0;
+	cout << 'initialize finished' << endl;
 }
 
 void PID::UpdateError(double cte) {
@@ -27,9 +28,13 @@ void PID::UpdateError(double cte) {
 
 	prev_cte = cte;
 	
+	cout << "Update Error" << endl;
+
 }
 
 double PID::TotalError() {
+
+	cout << "Return Total Error" << endl;
 
 	return Kp * p_error + Kd * d_error + Ki * i_error;
 
