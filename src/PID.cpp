@@ -11,9 +11,11 @@ PID::PID() {}
 PID::~PID() {}
 
 void PID::Init(double Kp, double Ki, double Kd) {
-	 PID::Kp = Kp;
+/*
+ PID::Kp = Kp;
   PID::Ki = Ki;
   PID::Kd = Kd;
+  */
 	
 	
 	prev_cte = 0;
