@@ -63,7 +63,7 @@ int main()
           */
 		  pid.UpdateError(cte);
 		  // need steer_value normalization here or in pid class.
-		  steer_value = steer_value - pid.TotalError();
+		  steer_value = - pid.TotalError();
 		double te = pid.TotalError();
 		std::cout << "pid.TotalError() is : "<< te << std::endl;
 		/* I think steer should be normalized , but I found it also work without normalized. I don't know why.
